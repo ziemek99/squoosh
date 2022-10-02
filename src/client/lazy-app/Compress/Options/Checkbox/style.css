@@ -20,7 +20,3 @@
 .checked {
   fill: var(--main-theme-color);
 }
-
-.disabled {
-  fill: var(--dark-gray);
-}

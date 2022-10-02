@@ -98,7 +98,7 @@ export class Options extends Component<Props, State> {
           lossyPalette: optionState.lossless ? optionState.slightLoss : false,
           decodingSpeedTier: optionState.decodingSpeedTier,
           photonNoiseIso: optionState.photonNoiseIso,
-          lossyModular: optionState.quality < 7 ? true : optionState.alternativeLossy,
+          lossyModular: optionState.alternativeLossy,
         };
 
         // Updating options, so we don't recalculate in getDerivedStateFromProps.
@@ -169,8 +169,7 @@ export class Options extends Component<Props, State> {
               <label class={style.optionToggle}>
                 Alternative lossy mode
                 <Checkbox
-                  checked={quality < 7 ? true : alternativeLossy}
-                  disabled={quality < 7}
+                  checked={alternativeLossy}
                   onChange={this._inputChange('alternativeLossy', 'boolean')}
                 />
               </label>
